@@ -4,12 +4,6 @@ import tensorflow.keras as kr
 import numpy as np
 # for data frames.
 import pandas as pd
-# for plotting
-import matplotlib.pyplot as plt
-# for test and train datasets
-import sklearn.model_selection as mod
-# flask for web app.
-import flask as fl
 
 # lines 15 to 26 pulled from jupyter notebook analysis
 df = pd.read_csv("https://raw.githubusercontent.com/ianmcloughlin/2020A-machstat-project/master/dataset/powerproduction.csv")
@@ -25,12 +19,5 @@ model.compile('adam', loss='mean_squared_error')
 
 model.fit(data['speed'], data['power'], epochs=200, batch_size=10)
 
-# Create a new web app.
-app = fl.Flask(__name__)
-
-@app.route("/<int:speed>")
-def predict(speed):
-    return model.predict(speed)
-
-if __name__ == "__main__":
-    app.run(debug = True)
+def power_prediction(x):
+    return model.predict(x)

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Power Production of Wind Turbines</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--from https://getbootstrap.com/docs/5.0/getting-started/introduction/-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--xxx-->
+        <h1 class="display-1">Power Production Predictor</h1> 
+        <br>
+        <h6 class="display-6">Enter a wind speed below to estimate the wind turbine power production</h6> 
+        <br>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Wind Speed</span>
+            <input type="text" class="form-control" id="windSpeed" placeholder="Enter speed here...">
+            <span class="input-group-text">m/s</span>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" onclick=doPrediction()>Predict</button>
+        </div>
+        <div><p id="result" class="lead"></p></div>
+          
+        <br>
+            
+    </body>
+</html>
