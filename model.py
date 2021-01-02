@@ -19,5 +19,6 @@ model.compile('adam', loss='mean_squared_error')
 
 model.fit(data['speed'], data['power'], epochs=200, batch_size=10)
 
-def power_prediction(x):
-    return model.predict(x)
+# source: https://medium.com/datadriveninvestor/flask-api-for-keras-87c06da174e8
+# save model and weights to file
+model.save('turbine_model')
